@@ -1,0 +1,5 @@
+# Repository text is LF everywhere. client.js is verified byte-for-byte against
+# pet-line.png, so a CRLF conversion on checkout would break that check.
+* text=auto eol=lf
+*.png binary
+*.ico binary

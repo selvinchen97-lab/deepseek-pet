@@ -1,0 +1,13 @@
+# Dependencies, if a checkout ever installs any
+node_modules/
+
+# Editor and OS noise
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Local scratch
+*.log
+tmp/

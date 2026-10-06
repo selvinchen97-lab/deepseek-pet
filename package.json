@@ -1,0 +1,48 @@
+{
+  "name": "@local/dsh-pet-balance",
+  "version": "1.0.0",
+  "private": true,
+  "description": "DeepSeek Harness desktop pet showing the account's recharge and bonus balances",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/selvinchen97-lab/deepseek-pet.git"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "cordis-plugin",
+    "desktop-pet"
+  ],
+  "type": "module",
+  "icon": "./icon.svg",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./pet-line.png": "./pet-line.png",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "build.mjs",
+    "ui-template.mjs",
+    "pet-line.png",
+    "icon.svg",
+    "cordis.patch.yml",
+    "locale/*.json"
+  ],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    }
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "verify": "node tools/verify-asset.mjs"
+  }
+}
